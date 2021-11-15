@@ -2,69 +2,55 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Features -
 
-In the project directory, you can run:
+- #### Add goal
 
-### `yarn start`
+  add goal by with title, description and 5 labels to choose from.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img src="/.github/images/add-goal.png">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- #### Start/pause timer
 
-### `yarn test`
+  Start the timer as you start to work towards your goal. you may close the browser or even turn off the computer and the timer will still be running when you come back. However you may pause the timer whenever you want.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <img src="/.github/images/timer.png">
 
-### `yarn build`
+- #### Edit goal
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  Edit goals by modifying the title, description and labels.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <img src="/.github/images/edit-mode.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- #### Filter Goals
 
-### `yarn eject`
+  Filter goals by text and/or labels
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  <img src="/.github/images/filter.png">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- #### Visualize your goals
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  See a visual representation of how much you spent for every goal.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  <img src="/.github/images/chart.png">
 
-## Learn More
+- #### Dark mode
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  Because its awesome
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Tech used to build this project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<table>
+  <tr>
+    <td align="center"> <img align="center" src="/.github/icons/react.png" alt="react logo" width="100" /></td>
+		<td align="center"> <img align="center" src="/.github/icons/chartjs.svg" alt="chart.js logo" width="100" /></td>	
+		<td align="center"> <img align="center" src="/.github/icons/materialui.svg" alt="material-ui logo" width="100" /></td>
+   <tr>
+      <td align="center"><b> React </b></td>
+			<td align="center"><b> Chart.js </b></td>
+			<td align="center"><b> Material-UI </b></td>
+  </tr>
+</table>
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
