@@ -9,7 +9,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import FormControl from '@mui/material/FormControl';
 
-const TaskForm = ({setTasks}) => {
+const TaskForm = ({setTasks, setFilteredTasks}) => {
     const [title, setTitle, resetTitle] = useInputState("");
     const [description, setDescription, resetDescription] = useInputState("");
  
@@ -28,6 +28,9 @@ const TaskForm = ({setTasks}) => {
         };
         
         setTasks((prevTask) => {
+            return [...prevTask, newTask]
+        });
+        setFilteredTasks((prevTask) => {
             return [...prevTask, newTask]
         });
 

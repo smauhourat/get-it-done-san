@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import { v4 as uuidv4 } from "uuid";
 import './App.css';
-import React, { Fragment } from 'react'
+import React, { useEffect, Fragment } from 'react'
 import Navbar from './components/layout/Navbar'
 import SearchToolbar from './components/layout/SearchToolbar'
 import Tasks from './components/tasks/Tasks'
@@ -27,6 +27,12 @@ function App() {
     },
   ]);  
 
+  const [filteredTasks, setFilteredTasks] = useLocalStorageState("filteredTasks", tasks);
+
+  useEffect(() => {
+    setFilteredTasks(tasks);
+  }, [tasks]);
+
   return (
     <Fragment>
       <CssBaseline />
@@ -39,13 +45,13 @@ function App() {
               
             </Grid>            
             <Grid item xs={12} className="grid-item">
-              <TaskForm setTasks={setTasks} />
+              <TaskForm setTasks={setTasks} setFilteredTasks={setFilteredTasks} />
             </Grid>
             <Grid item xs={12} className="grid-item">
-              <SearchToolbar />
+              <SearchToolbar setFilteredTasks={setFilteredTasks} tasks={tasks}/>
             </Grid>
             <Grid item xs={12} className="grid-item">
-              <Tasks tasks={tasks} />
+              <Tasks tasks={filteredTasks} />
             </Grid>
           </Grid>      
         {/* </Box> */}
