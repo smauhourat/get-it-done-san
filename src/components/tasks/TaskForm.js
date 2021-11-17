@@ -25,6 +25,7 @@ const TaskForm = ({setTasks, setFilteredTasks}) => {
             _id: uuidv4(),
             title,
             description,
+            spendTime: 0
         };
         
         setTasks((prevTask) => {

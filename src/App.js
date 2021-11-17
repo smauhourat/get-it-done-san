@@ -18,12 +18,14 @@ function App() {
       _id: uuidv4(),
       title: "Eat breakfast",
       description:
-        "buy oatmeal, tea and dried rose petals from the local grocery store"
+        "buy oatmeal, tea and dried rose petals from the local grocery store",
+      spendTime: 0
     },
     {
       _id: uuidv4(),
       title: "Win hackathon",
-      description: "Make best task planner app ever"
+      description: "Make best task planner app ever",
+      spendTime: 0
     },
   ]);  
 
