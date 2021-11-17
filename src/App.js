@@ -45,7 +45,7 @@ function App() {
               <SearchToolbar />
             </Grid>
             <Grid item xs={12} className="grid-item">
-              <Tasks />
+              <Tasks tasks={tasks} />
             </Grid>
           </Grid>      
         {/* </Box> */}

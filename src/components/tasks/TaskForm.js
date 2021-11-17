@@ -13,6 +13,11 @@ const TaskForm = ({setTasks}) => {
     const [title, setTitle, resetTitle] = useInputState("");
     const [description, setDescription, resetDescription] = useInputState("");
  
+    const resetForm = () => {
+        resetTitle();
+        resetDescription();
+    };
+
     const handleAddTask = (e) => {
         e.preventDefault();
 
@@ -22,11 +27,11 @@ const TaskForm = ({setTasks}) => {
             description,
         };
         
-        console.log('concha frita');
-        
         setTasks((prevTask) => {
             return [...prevTask, newTask]
         });
+
+        resetForm();
     }
     return (
         <Card variant="outlined">
