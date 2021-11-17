@@ -6,15 +6,17 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 
-const TaskItem = ({task}) => {
+const TaskItem = ({task, setFilteredTasks}) => {
     const [displaySpendTime, setDisplaySpendTime] = useState(
         task.spendTime
     );
 
     const handleStartStop = () => {
-        task.spendTime += 10000;
+        task.spendTime = task.spendTime + 10000;
+        //task.title = task.spendTime.toString();
         setDisplaySpendTime(task.spendTime);
     }
+
     return (
         <Card variant="outlined">
             <CardContent>

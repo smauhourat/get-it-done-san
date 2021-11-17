@@ -53,7 +53,7 @@ function App() {
               <SearchToolbar setFilteredTasks={setFilteredTasks} tasks={tasks}/>
             </Grid>
             <Grid item xs={12} className="grid-item">
-              <Tasks tasks={filteredTasks} />
+              <Tasks tasks={filteredTasks} setFilteredTasks={setFilteredTasks} />
             </Grid>
           </Grid>      
         {/* </Box> */}

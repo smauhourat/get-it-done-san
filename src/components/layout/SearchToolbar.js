@@ -4,7 +4,7 @@ import InputBase from "@material-ui/core/InputBase";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 
-const SearchToolbar = ({setFilteredTasks, tasks}) => {
+const SearchToolbar = ({tasks, setFilteredTasks}) => {
 
     const handleFilterTask = (e) => {
         e.preventDefault();
