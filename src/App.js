@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import { v4 as uuidv4 } from "uuid";
 import './App.css';
 import React, { Fragment } from 'react'
 import Navbar from './components/layout/Navbar'
@@ -9,19 +10,36 @@ import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
+import useLocalStorageState from './hooks/useLocalStorageState';
 
 function App() {
-  
+  const [tasks, setTasks] = useLocalStorageState("tasks", [
+    {
+      _id: uuidv4(),
+      title: "Eat breakfast",
+      description:
+        "buy oatmeal, tea and dried rose petals from the local grocery store"
+    },
+    {
+      _id: uuidv4(),
+      title: "Win hackathon",
+      description: "Make best task planner app ever"
+    },
+  ]);  
+
   return (
     <Fragment>
       <CssBaseline />
       <Navbar />
 
-      <Container maxWidth="sm">
-        <Box sx={{ bgcolor: '#c8e6c9', height: '80vh', with: '100vh', padding: '30px', borderRadius: '5%'}}>
-          <Grid container spacing={2}>
+      <Container>
+        {/* <Box sx={{ bgcolor: '#c8e6c9', height: '80vh', with: '100vh', padding: '30px', borderRadius: '5%'}}> */}
+          <Grid container spacing={2} >
+            <Grid item xs={12} md={12}>
+              
+            </Grid>            
             <Grid item xs={12} className="grid-item">
-              <TaskForm />
+              <TaskForm setTasks={setTasks} />
             </Grid>
             <Grid item xs={12} className="grid-item">
               <SearchToolbar />
@@ -30,7 +48,7 @@ function App() {
               <Tasks />
             </Grid>
           </Grid>      
-        </Box>
+        {/* </Box> */}
       </Container>
     </Fragment>
   );
